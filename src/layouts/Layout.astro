@@ -9,10 +9,7 @@ export interface Props {
   title: string;
 }
 
-const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
-  Astro.site
-).toString();
+const resolvedImageWithDomain = new URL("/logo1.png", Astro.site).toString();
 
 const { title } = Astro.props;
 
