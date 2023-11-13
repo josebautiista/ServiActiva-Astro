@@ -1,0 +1,61 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import CardServices from "@components/CardServices.astro";
+---
+
+<Layout title="Servicios">
+  <Container>
+    <section class="w-full flex flex-col gap-6">
+      <h2 class="text-4xl text-jacksons-600">Nuestros Servicios</h2>
+      <CardServices
+        title="SERVICIOS GENERALES"
+        body="Nuestros profesionales de LIMPIEZA EN PROPIEDAD HORIZONTAL manejan altos estándares de servicio los cuales derivan desde el dejar impecables todas las áreas como también, el brindar un servicio al residente de manera AMABLE, SEGURA Y PROFESIONAL; siempre manejando una excelente presentación personal y trabajo responsable. Experiencia e innovación en el mantenimiento de jardines y zonas comunes. Nuestro sistema de ASEO DIARIO permite que su unidad residencial conserve la apariencia de un hotel cinco entrellas. Atendemos conjuntos residenciales, edificios, condominios y oficinas."
+        img="/generales.png"
+        ubicacion="right"
+      />
+
+      <CardServices
+        title="PODA DE JARDINES"
+        body="El mantenimiento de las áreas verdes son parte de nuestros servicios para que los espacios tengan armonía en los lugares de esparcimiento y recreación, así mismo también los realizamos bajo toda la seguridad y excelencia de nuestros clientes."
+        img="/capa12.png"
+        ubicacion="left"
+      />
+
+      <CardServices
+        title="LIMPIEZA DE TANQUES"
+        body="Un tanque de agua cumple funciones de abastecimeinto de agua, regulación de la presión, almacenamiento para ocasiones de corte de agua o mantenimiento de agua a nivel local. De una limpieza y desinfección de tanques cada seis meses, se garantizara un agua potable segura y apta para consumo humano. El decreto 1575 del 09 de mayo de 2007 establece que los tanques para almacenamiento de agua potable deben lavarse y desinfectarse mínimo cada seis meses."
+        img="/tanques.png"
+        ubicacion="right"
+      />
+
+      <CardServices
+        title="SERVICIO DE SALVAVIDAS"
+        body="El servicio de salvavidas garantiza a los usuarios de las piscinas que están supervisados y tiene el apoyo de personal por si se llega a presentar algún imprevisto. Los salvavidas tienen conocimiento en primeros auxilios, además de ser nadadores expertos."
+        img="/salva.png"
+        ubicacion="left"
+      />
+
+      <CardServices
+        title="PAISAJISMO Y MANTENIMIENTO DE JARDINES"
+        body="Las áreas verdes son un recurso en nuestras propiedades que generan un valor agregado, por esto deben tener el manejo adecuado. Para nosotros es muy importante conservar un equilibrio entre estética, eficiencia y sostenibilidad el cual hace que su propiedad haga la diferencia."
+        img="/capa11.png"
+        ubicacion="right"
+      />
+
+      <CardServices
+        title="SERVICIO DE FUMIGACIÓN"
+        body="A nadie le gusta que las plagas invadan su negocio, empresa, o hogar, el control de plagas es un servicio básico de HIGIENE AMBIENTAL. La presencia de roedores, cucarachas,zancudos o mosquitos son una amenaza para la salud y pueden provocar graves pérdidas económicas."
+        img="/capa21.png"
+        ubicacion="left"
+      />
+
+      <CardServices
+        title="SG-SST"
+        body="Encuentras conocimiento e implementación en un solo lugar.Puedes realizar uso de los siguientes servicios: Consultoría, Capacitaciones, Auditorías, Dotaciones y elementos de protección personal."
+        img="/capa7.png"
+        ubicacion="right"
+      />
+    </section>
+  </Container>
+</Layout>

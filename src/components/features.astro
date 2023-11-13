@@ -1,0 +1,52 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Jardineria",
+    description:
+      "Ofrecemos servicios de mantenimiento de áreas verdes para crear armonía en espacios de esparcimiento y recreación, garantizando seguridad y excelencia para nuestros clientes.",
+    icon: "mdi:flower",
+  },
+  {
+    title: "Servicios Generales",
+    description:
+      "Mantenemos áreas verdes para espacios armoniosos y seguros de esparcimiento y recreación, con excelencia para nuestros clientes.",
+    icon: "carbon:clean",
+  },
+  {
+    title: "Paisajismo",
+    description:
+      "Valoramos y cuidamos las áreas verdes en nuestras propiedades para marcar la diferencia a través de un equilibrio perfecto entre belleza, eficiencia y sostenibilidad.",
+    icon: "maki:garden-centre",
+  },
+ 
+];
+---
+
+<div class="mt-16 md:mt-0 ">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-jacksons-600">
+    Soluciones Integrales para Ambientes Impecables
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Optimiza tus Ambientes con Nuestra Gama de Servicios de Limpieza y Mantenimiento de Excelencia
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-8 items-center flex-col border-solid border-2 rounded-lg shadow-lg border-atlantis-900 border-opacity-50 p-6 hover:bg-atlantis-50">
+        <div class="mt-1 bg-atlantis-600 rounded-full p-2 w-14 h-14 shrink-0">
+          <Icon class="text-atlantis-100" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg text-atlantis-600 ">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+  <a href="/servicios" class="decoration-solid underline hover:text-atlantis-600 w-56">Conoce nuestros servicios</a>
+</div>

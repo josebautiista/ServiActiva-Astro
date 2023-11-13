@@ -1,0 +1,33 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+import { Picture } from "@astrojs/image/components";
+import clientsImage from "assets/capa 20.png";
+---
+
+<div class="mt-24 flex items-center">
+  <div class="w-full md:w-1/2">
+    <h2 class="text-left text-atlantis-700 text-xl md:text-4xl">¡Trabajamos con los mejores!</h2>
+    <p class="text-left text-sm md:text-md lg:text-lg mt-4 text-slate-600">Clientes satisfechos, nuestro mayor logro. A lo largo de nuestra trayectoria, hemos tenido el privilegio de servir a una amplia gama de clientes, desde conjuntos residenciales y edificios hasta oficinas y empresas. Cada proyecto es una historia de éxito en la que hemos brindado soluciones efectivas y mantenido espacios impecables.</p>
+    <div class="flex gap-0 items-start md:justify-start justify-center mt-10 flex-wrap">
+      <Icon class="h-14 w-14 md:h-12 md:w-20 text-atlantis-950" name="simple-icons:homeassistantcommunitystore" />
+      <Icon class="h-14 w-14 md:h-12 md:w-20 text-atlantis-950" name="simple-icons:stackbit" />
+      <Icon class="h-14 w-14 md:h-12 md:w-20 text-atlantis-950" name="simple-icons:sky" />
+      <Icon class="h-14 w-14 md:h-12 md:w-20 text-atlantis-950" name="simple-icons:caterpillar" />
+      <Icon class="h-14 w-14 md:h-12 md:w-20 text-atlantis-950" name="simple-icons:veritas" />
+      <Icon class="h-14 w-14 md:h-12 md:w-20 text-atlantis-950" name="simple-icons:lubuntu" />
+    </div>
+  </div>
+  <div class="py-6 hidden md:block w-1/2">
+    <Picture
+      src={clientsImage}
+      alt="serviactiva"
+      widths={[200, 400, 600]}
+      aspectRatio="4:3"
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+      class="rounded-lg h-96"
+    />
+  </div>
+</div>

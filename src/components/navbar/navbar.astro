@@ -1,0 +1,54 @@
+---
+import Container from "@components/container.astro";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+
+const menuitems = [
+  
+  {
+    title: "Sobre nosotros",
+    path: "/about",
+  },
+  {
+    title: "Servicios",
+    path: "/servicios",
+  },
+  {
+    title: "Galeria",
+    path: "/galeria",
+  },
+];
+---
+
+<Container>
+  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+    <Astronav>
+      <div class="flex w-full lg:w-auto items-center justify-between">
+        <a href="/" class="text-lg"
+          ><span class="font-bold text-atlantis-600 text-2xl">Servi</span><span
+            class="text-jacksons-700 text-2xl">Activa</span
+          >
+        </a>
+        <div class="block lg:hidden">
+          <MenuIcon class="w-8 h-8 text-atlantis-500" />
+        </div>
+      </div>
+      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+        <ul class="flex flex-col lg:flex-row lg:gap-3">
+          {
+            menuitems.map((item, index) => (
+              <>
+                  <li>
+                    <a
+                      href={item.path}
+                      class="flex lg:px-3 text-lg py-2 items-center text-atlantis-700 hover:text-atlantis-500">
+                      <span> {item.title}</span>
+                    </a>
+                  </li>
+              </>
+            ))
+          }
+        </ul>
+      </MenuItems>
+    </Astronav>
+  </header>
+</Container>

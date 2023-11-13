@@ -1,0 +1,122 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+
+import { Picture } from "@astrojs/image/components";
+import heroImage from "../assets/capa12.png";
+import Icon from "astro-icon";
+import Blanca from "assets/Blanca.png";
+import Fernando from "assets/Fernando.png";
+import video from "assets/video.mp4";
+---
+
+<Layout title="Sobre Nosotros">
+  <Container>
+    <section
+      class="grid lg:grid-cols-2 place-items-center pb-8 pt-0 md:pt-12 md:pb-12">
+      <div class="py-6 md:order-1 md:block">
+        <Picture
+          src={heroImage}
+          alt="Astronaut in the air"
+          widths={[200, 400, 600]}
+          aspectRatio="4:2"
+          sizes="(max-width: 800px) 100vw, 620px"
+          loading="eager"
+          format="avif"
+          class="rounded-lg"
+        />
+      </div>
+      <div>
+        <h1
+          class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-jacksons-600">
+          Sobre Nosotros
+        </h1>
+        <p class="text-lg mt-4 text-slate-600 max-w-xl">
+          Somos una empresa especializada en la prestación de servicios
+          integrales de aseo, brindamos a nuestros clientes soluciones efectivas
+          en cuanto a limpieza, servicios generales, jardinería, paisajismo,
+          fumigaciones, lavado de tanques, salvavidas y limpieza de obras, con
+          personal calificado que mantendrá todos sus espacios en perfectas
+          condiciones creando ambientes agradables.
+        </p>
+      </div>
+    </section>
+    <section
+      class="w-full h-max box-border bg-atlantis-200 flex flex-col items-center md:items-start md:flex-row justify-center">
+      <div
+        class="w-3/4 md:w-1/2 box-border py-14 md:px-14 h-full justify-center flex flex-col gap-4 items-center">
+        <Icon
+          class="h-10 w-10 md:h-10 md:w-10 text-atlantis-500"
+          name="mdi:check-circle"
+        />
+        <h3 class="text-3xl text-jacksons-600 text-center">Visión</h3>
+        <p class="text-base text-slate-800">
+          Ser la organización líder en el mercado con el mejor servicio de aseo
+          limpieza y mantenimiento a través de propuestas integrales,
+          innovadoras y de excelente calidad que cumplan con el más mínimo
+          detalle, garantizando a su vez la efectividad y confianza en cada una
+          de las labores.
+        </p>
+      </div>
+
+      <div
+        class="w-3/4 md:w-1/2 box-border py-14 md:px-14 h-full justify-center flex flex-col gap-4 items-center">
+        <Icon
+          class="h-10 w-10 md:h-10 md:w-10 text-atlantis-500"
+          name="mdi:star-shooting"
+        />
+        <h3 class="text-3xl text-jacksons-600 text-center">Misión</h3>
+
+        <p class="text-base text-slate-800">
+          Somos una organización diseñada para brindar servicios integrales de
+          limpieza, satisfaciendo los requerimientos de nuestros clientes,
+          buscando siempre la excelencia, empleamos el mejor talento humano y
+          tecnológico con el fin de suministrar servicios de calidad mediante la
+          mejora continua en cada uno de los procesos.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 flex flex-col gap-10">
+      <h3 class="text-3xl text-jacksons-600 text-center">
+        Pilares del Progreso
+      </h3>
+      <div
+        class="w-full flex flex-col gap-5 md:flex-row justify-around items-center">
+        <div
+          class="w-max box-border p-5 rounded-lg bg-jacksons-500 flex flex-col items-center gap-5">
+          <p class="text-lg text-white">Nelson Fernardo Morales Hernández</p>
+          <Picture
+            src={Fernando}
+            alt="Astronaut in the air"
+            widths={[600]}
+            sizes="(max-width: 300px) 100vw, 220px"
+            loading="eager"
+            format="avif"
+          />
+        </div>
+        <div
+          class="w-max box-border p-5 px-12 rounded-lg bg-jacksons-500 flex flex-col items-center gap-5">
+          <p class="text-lg text-white">Blanca Nubia Babativa Gaviria</p>
+          <Picture
+            src={Blanca}
+            alt="Astronaut in the air"
+            widths={[600]}
+            sizes="(max-width: 300px) 100vw, 220px"
+            loading="eager"
+            format="avif"
+          />
+        </div>
+      </div>
+    </section>
+
+    <div class="w-full flex flex-col items-center box-border p-5 gap-4">
+      <h2 class="text-3xl text-atlantis-600 text-center">
+        Conoce más de nosotros
+      </h2>
+      <div class="w-1/2 min-w-[400px]">
+        <video autoplay src={video} controls muted></video>
+      </div>
+    </div>
+  </Container>
+</Layout>

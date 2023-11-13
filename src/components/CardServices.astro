@@ -1,0 +1,29 @@
+---
+import { Picture } from "@astrojs/image/components";
+const { title, body, img, ubicacion, children } = Astro.props;
+
+const bg = ubicacion === "left" ? "#baf02b" : "#7b77ff";
+const position = ubicacion === "left" ? "row-reverse" : "row";
+const color = ubicacion === "left" ? "black" : "white";
+---
+
+<div
+  class="flex p-5 rounded-md justify-between gap-5 sm:flex-col"
+  style={{ backgroundColor: bg, flexDirection: position, color }}>
+  <div class="w-2/3 flex flex-col gap-4">
+    <h2 class="text-xl font-bold">{title}</h2>
+    <p>{body}</p>
+  </div>
+  <div>
+    <Picture
+      src={img}
+      alt="Astronaut in the air"
+      widths={[200, 400, 600]}
+      aspectRatio="4:2"
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+      class="rounded-lg"
+    />
+  </div>
+</div>

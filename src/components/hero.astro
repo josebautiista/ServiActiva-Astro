@@ -1,0 +1,43 @@
+---
+import { Picture } from "@astrojs/image/components";
+import heroImage from "assets/capa19.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pb-8 pt-0 md:pt-12 md:pb-12">
+  <div class="py-6 md:order-1 md:block">
+    <Picture
+      src={heroImage}
+      alt="Astronaut in the air"
+      widths={[200, 400, 600]}
+      aspectRatio="4:3"
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+      class="rounded-lg"
+    />
+  </div>
+  <div>
+    <h1
+      class="text-atlantis-600 text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Expertos en crear espacios impecables.
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+      Expertos en servicios integrales de aseo, limpieza, jardinería y más para mantener sus espacios impecables y agradables.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3 ">
+      <Link
+        href="#"
+        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
+        target="_blank"
+        class="bg-jacksons-600 flex gap-1 items-center justify-center hover:bg-jacksons-700 text-white px-8 py-3 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-jacksons-900 focus:ring-white"
+        rel="noopener">
+        <Icon class="text-white w-5 h-5" name="ic:baseline-whatsapp" />
+
+        Contactanos
+      </Link>
+    </div>
+  </div>
+</main>
